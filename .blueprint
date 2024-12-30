@@ -3,12 +3,12 @@ created:
     - database/factories/ConferenceFactory.php
     - database/factories/SpeakerFactory.php
     - database/factories/TalkFactory.php
-    - database/migrations/2024_12_30_094308_create_venues_table.php
-    - database/migrations/2024_12_30_094309_create_conferences_table.php
-    - database/migrations/2024_12_30_094310_create_speakers_table.php
-    - database/migrations/2024_12_30_094311_create_talks_table.php
-    - database/migrations/2024_12_30_094312_create_conference_speaker_table.php
-    - database/migrations/2024_12_30_094313_create_conference_talk_table.php
+    - database/migrations/2024_12_30_094713_create_venues_table.php
+    - database/migrations/2024_12_30_094714_create_conferences_table.php
+    - database/migrations/2024_12_30_094715_create_speakers_table.php
+    - database/migrations/2024_12_30_094716_create_talks_table.php
+    - database/migrations/2024_12_30_094717_create_conference_speaker_table.php
+    - database/migrations/2024_12_30_094718_create_conference_talk_table.php
     - app/Models/Venue.php
     - app/Models/Conference.php
     - app/Models/Speaker.php
@@ -16,6 +16,6 @@ created:
 models:
     User: { name: string, email: string, email_verified_at: 'datetime nullable', password: string, remember_token: 'string nullable' }
     Venue: { name: string, city: string, country: string, postal_code: string, relationships: { hasMany: Conference } }
-    Conference: { name: string, description: string, start_date: datetime, end_date: datetime, status: string, region: string, venue_id: unsignedInteger, relationships: { belongsTo: Venue, belongsToMany: 'Speaker, Talk' } }
+    Conference: { name: string, description: string, start_date: datetime, end_date: datetime, status: string, region: string, venue_id: 'unsignedInteger nullable', relationships: { belongsTo: Venue, belongsToMany: 'Speaker, Talk' } }
     Speaker: { name: string, email: string, bio: text, twitter_handle: string, relationships: { belongsToMany: Conference } }
     Talk: { title: string, abstract: text, relationships: { belongsTo: Speaker, belongsToMany: Conference } }
