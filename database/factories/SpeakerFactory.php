@@ -8,16 +8,10 @@ use App\Models\Speaker;
 
 class SpeakerFactory extends Factory
 {
-    /**
-     * The name of the factory's corresponding model.
-     *
-     * @var string
-     */
+
     protected $model = Speaker::class;
 
-    /**
-     * Define the model's default state.
-     */
+
     public function definition(): array
     {
         return [

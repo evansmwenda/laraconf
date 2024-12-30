@@ -3,12 +3,12 @@ created:
     - database/factories/ConferenceFactory.php
     - database/factories/SpeakerFactory.php
     - database/factories/TalkFactory.php
-    - database/migrations/2024_12_30_094713_create_venues_table.php
-    - database/migrations/2024_12_30_094714_create_conferences_table.php
-    - database/migrations/2024_12_30_094715_create_speakers_table.php
-    - database/migrations/2024_12_30_094716_create_talks_table.php
-    - database/migrations/2024_12_30_094717_create_conference_speaker_table.php
-    - database/migrations/2024_12_30_094718_create_conference_talk_table.php
+    - database/migrations/2024_12_30_094935_create_venues_table.php
+    - database/migrations/2024_12_30_094936_create_conferences_table.php
+    - database/migrations/2024_12_30_094937_create_speakers_table.php
+    - database/migrations/2024_12_30_094938_create_talks_table.php
+    - database/migrations/2024_12_30_094939_create_conference_speaker_table.php
+    - database/migrations/2024_12_30_094940_create_conference_talk_table.php
     - app/Models/Venue.php
     - app/Models/Conference.php
     - app/Models/Speaker.php
