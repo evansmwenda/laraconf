@@ -16,6 +16,11 @@ use Filament\Forms\Components\DateTimePicker;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 use App\Filament\Resources\ConferenceResource\Pages;
 use App\Filament\Resources\ConferenceResource\RelationManagers;
+use Filament\Forms\Components\Actions\Action;
+use Filament\Forms\Components\MarkdownEditor;
+use Filament\Forms\Components\RichEditor;
+use Filament\Forms\Components\Toggle;
+use Filament\Support\Markdown;
 
 class ConferenceResource extends Resource
 {
@@ -30,14 +35,16 @@ class ConferenceResource extends Resource
                 TextInput::make('name')
                     ->label('Conference Name')
                     ->required(),
-                TextInput::make('description')
+                MarkdownEditor::make('description')
+                    // ->toolbarButtons(['heading','bold'])
                     ->required(),
                 DateTimePicker::make('start_date')
                     ->required(),
                 DateTimePicker::make('end_date')
                     ->required(),
-                TextInput::make('status')
+                Select::make('status')
                     ->required(),
+                Toggle::make('is_published')->default(false),
                 TextInput::make('region')
                     ->required(),
                 Select::make('venue_id')
