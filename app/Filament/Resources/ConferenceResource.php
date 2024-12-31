@@ -28,6 +28,7 @@ class ConferenceResource extends Resource
         return $form
             ->schema([
                 TextInput::make('name')
+                    ->label('Conference Name')
                     ->required(),
                 TextInput::make('description')
                     ->required(),
